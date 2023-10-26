@@ -12,7 +12,14 @@ body {
 
 .main_wrapper {
   background-color: #181824;
-  height: 100vh;
+}
+
+.home,
+.experience,
+.work,
+.resume,
+.contact {
+  padding: 7rem 0rem 6rem;
 }
 
 .section_one .circle {
