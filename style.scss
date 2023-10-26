@@ -12,149 +12,210 @@ body {
 .main_wrapper {
   background-color: #181824;
   height: 100vh;
-}
-.section_one {
-  .circle {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @media screen and (max-width: 600px) {
+    height: auto;
+  }
+  .navbar-toggler {
     @media screen and (max-width: 600px) {
-      width: 100%;
-    }
-    .logo {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      background-color: #fff;
-      border-radius: 50%;
-      background: url(./sadik.jpg);
-      background-size: cover;
-      filter: brightness(1.2) contrast(1);
-      border: 1px solid #000;
-    }
-    .text {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      animation: animateText 20s linear infinite;
-      span {
-        position: absolute;
-        left: 50%;
-        font-size: 19px;
-        font-weight: 800;
-        transform-origin: 0 125px;
-        font-family: consolas;
-        text-transform: uppercase;
-        background: radial-gradient(
-          circle farthest-side at center center,
-          #ff0000 0%,
-          #ffff00 25%,
-          #05c1ff 50%,
-          #ffff00 75%,
-          #ff0000 100%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-    @keyframes animateText {
-      0% {
-        transform: rotate(0deg);
-      }
-      50% {
-        transform: rotate(100deg);
-      }
-      100% {
-        transform: rotate(-120deg);
-      }
+      margin-bottom: 0px;
     }
   }
-  .detail {
-    .name_wrapper {
-      display: flex;
-      gap: 10px;
+}
+.home,
+.experience,
+.work,
+.resume {
+  padding: 6rem 1.5rem;
+  @media screen and (max-width: 600px) {
+    padding: 2rem 1rem;
+  }
+}
+.home {
+  .main_section {
+    display: flex;
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
     }
-    .name_text {
-      animation: stroke 3s infinite alternate;
-      font-size: 50px;
-      font-weight: 800;
+    .left_side {
+      background-color: #121516;
+      padding: 20px;
+      .circle {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
+        .logo {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          background-color: #fff;
+          border-radius: 50%;
+          background: url(./sadik.jpg);
+          background-size: cover;
+          filter: brightness(1.2) contrast(1);
+          border: 1px solid #000;
+        }
+        .text {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          animation: animateText 20s linear infinite;
+          span {
+            position: absolute;
+            left: 50%;
+            font-size: 19px;
+            font-weight: 800;
+            transform-origin: 0 125px;
+            font-family: consolas;
+            text-transform: uppercase;
+            background: radial-gradient(
+              circle farthest-side at center center,
+              #ff0000 0%,
+              #ffff00 25%,
+              #05c1ff 50%,
+              #ffff00 75%,
+              #ff0000 100%
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        @keyframes animateText {
+          0% {
+            transform: rotate(0deg);
+          }
+          50% {
+            transform: rotate(100deg);
+          }
+          100% {
+            transform: rotate(-120deg);
+          }
+        }
+      }
     }
-    @keyframes stroke {
-      0% {
-        background: linear-gradient(to left, #00ff00 0%, #00ffff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      50% {
-        background: linear-gradient(to bottom right, #25cc0f 0%, #9e3212 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      75% {
-        background: linear-gradient(
-          to left,
-          #ffff00 0%,
-          #05c1ff 50%,
-          #ffff00 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      100% {
-        background: linear-gradient(
-          to left,
-          #008080 0%,
-          #ffffff 25%,
-          #05c1ff 50%,
-          #ffffff 75%,
-          #005757 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-    h1 {
-      font-size: 50px;
-      font-weight: 700;
-    }
-    h5 {
-      font-size: 20px;
-      font-weight: 700;
-      color: #ccc;
-      margin-left: 30px;
+    .right_side {
+      padding: 20px;
       @media screen and (max-width: 600px) {
-        margin-left: 0px;
-        text-align: center;
+        padding: 20px 0px;
+      }
+      .detail {
+        @media screen and (max-width: 600px) {
+          text-align: center;
+        }
+        .name_wrapper {
+          display: flex;
+          gap: 10px;
+          @media screen and (max-width: 600px) {
+            justify-content: center;
+            margin-bottom: 20px;
+          }
+          .im_text {
+            color: #fff;
+            font-size: 50px;
+            font-weight: 800;
+            @media screen and (max-width: 600px) {
+              font-size: 35px;
+            }
+          }
+          .name_text {
+            animation: stroke 3s infinite alternate;
+            font-size: 50px;
+            font-weight: 800;
+            @media screen and (max-width: 600px) {
+              font-size: 35px;
+            }
+          }
+        }
+        @keyframes stroke {
+          0% {
+            background: linear-gradient(to left, #00ff00 0%, #00ffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          50% {
+            background: linear-gradient(
+              to bottom right,
+              #25cc0f 0%,
+              #9e3212 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          75% {
+            background: linear-gradient(
+              to left,
+              #ffff00 0%,
+              #05c1ff 50%,
+              #ffff00 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          100% {
+            background: linear-gradient(
+              to left,
+              #008080 0%,
+              #ffffff 25%,
+              #05c1ff 50%,
+              #ffffff 75%,
+              #005757 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        h1 {
+          font-size: 50px;
+          font-weight: 700;
+        }
+        h5 {
+          font-size: 20px;
+          font-weight: 700;
+          color: #ccc;
+          margin-left: 30px;
+          @media screen and (max-width: 600px) {
+            margin-left: 0px;
+            text-align: center;
+          }
+        }
       }
     }
   }
 }
 .experience {
   color: #fff;
+  // padding: 15px 20px;
   .box_wrap {
     display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 50px;
+    grid-template-columns: repeat(3, 340px);
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     .work_exp {
       // background-color: red;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      // justify-content: space-between;
+      gap: 15px;
       border: 1px solid #fff;
       border-radius: 5px;
-      padding: 15px 10px;
+      padding: 15px 20px;
       .ex_circle {
         display: flex;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
+        flex-direction: column;
         width: 80px;
         height: 80px;
-        padding: 5px;
+        padding: 10px 0px 0px 0px;
         background: linear-gradient(#ccc 0 0) padding-box,
           /*this is your grey background*/
             linear-gradient(to right, #9c20aa, #fb3570) border-box;
@@ -169,6 +230,7 @@ body {
         font-size: 20px;
         font-weight: 700;
         text-transform: uppercase;
+        text-align: left;
       }
       @keyframes circle {
         0% {
@@ -196,6 +258,145 @@ body {
                 #005757 100%
               )
               border-box;
+        }
+      }
+    }
+  }
+}
+.work {
+  .slick_box {
+    // width: 800px;
+    height: auto;
+    padding: 20px 0px;
+    background-color: #00ffff;
+    // display: flex;
+    // align-items: center;
+    .main_item {
+      margin: 0px 10px;
+      height: 100px;
+      background-color: green;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 50px solid #00ffff;
+        border-bottom: 50px solid #00ffff;
+        border-left: 60px solid transparent;
+      }
+      .arrow-rightasdas {
+        width: 100%;
+        height: 100px;
+        // border-top: 60px solid transparent;
+        // border-bottom: 60px solid transparent;
+        // border-left: 200px solid green;
+        // border-right: 60px solid green;
+      }
+    }
+  }
+}
+.contact {
+  .main_section {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    .form_section {
+      margin-top: 3rem;
+      width: 400px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      background-color: #ddd;
+      padding: 30px 30px;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+      label {
+        color: #181824;
+        font-weight: 600;
+      }
+
+      input,
+      textarea {
+        width: 360px;
+        border-radius: 4px;
+        border: none;
+        padding: 6px 15px;
+        margin-bottom: 10px;
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
+      }
+      .submit {
+        width: 140px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid #181824;
+        color: #181824;
+        background-color: #fff;
+        font-weight: 600;
+        margin-top: 10px;
+        transition: 0.5s ease-in-out;
+        &:hover {
+          color: #fff;
+          background-color: #292935;
+          transform: scale(1.1) translateX(10px);
+        }
+      }
+    }
+    .contact_section {
+      margin: 3rem 0rem;
+      width: 450px;
+      color: #fff;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        text-align: center;
+      }
+      .get_touch {
+        text-decoration: underline;
+        color: #fff;
+        margin-bottom: 3rem;
+      }
+      .contact_details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        @media screen and (max-width: 600px) {
+          gap: 2px;
+        }
+        .icon_div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: #fff;
+          font-size: 20px;
+          margin: 10px 0px;
+          @media screen and (max-width: 600px) {
+            justify-content: center;
+          }
+          a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+          }
+        }
+      }
+      .social_section {
+        margin-top: 3rem;
+        @media screen and (max-width: 600px) {
+          margin-top: 1rem;
+        }
+        a.href_link {
+          text-decoration: none;
+          img {
+            width: 45px;
+          }
         }
       }
     }
