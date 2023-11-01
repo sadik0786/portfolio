@@ -8,6 +8,15 @@
 body {
   font-size: 16px;
   font-family: consolas;
+  background-image: url(./tamalsen-home-cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-size: inherit;
+    background-position: top;
+  }
 }
 
 .name_text_color {
@@ -44,7 +53,6 @@ body {
   }
 }
 .main_wrapper {
-  background-color: #181824;
   width: 100%;
   height: 100vh;
 }
@@ -61,15 +69,13 @@ body {
 
 .home,
 .experience,
-.work,
-.resume {
+.work {
   padding: 6rem 1.5rem;
 }
 @media screen and (max-width: 600px) {
   .home,
   .experience,
-  .work,
-  .resume {
+  .work {
     padding: 2rem 1rem;
   }
 }
@@ -304,6 +310,136 @@ body {
 .work .slick_box .main_item .arrow-rightasdas {
   width: 100%;
   height: 100px;
+}
+
+.resume {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 770px;
+  height: 80vh;
+  padding: 2rem 0rem;
+  overflow-y: auto;
+}
+@media screen and (max-width: 600px) {
+  .resume {
+    width: 90%;
+    height: 92vh;
+    overflow-y: auto;
+    justify-content: flex-start;
+    align-items: unset;
+    padding: 1rem 0rem;
+  }
+}
+.resume .section_one {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+@media screen and (max-width: 600px) {
+  .resume .section_one {
+    gap: 30px;
+    flex-direction: column;
+  }
+}
+.resume .section_one .btn-right {
+  background: none;
+  border: 0;
+  font-size: 22px;
+  line-height: 2rem;
+  position: relative;
+  width: 20rem;
+  height: 2rem;
+  transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  .resume .section_one .btn-right {
+    width: 95%;
+    margin: 0px auto;
+  }
+}
+.resume .section_one .btn-right::before, .resume .section_one .btn-right::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #29c0d5;
+  border-radius: 2px;
+  display: block;
+  transition: all 1s;
+  height: 1rem;
+}
+.resume .section_one .btn-right::before {
+  box-shadow: -1px 1px 0 #1897c0, -2px 2px 0 #1897c0, -3px 3px 0 #1897c0, -4px 4px 0 #1897c0;
+  transform: skew(45deg);
+  top: 0;
+}
+.resume .section_one .btn-right::after {
+  box-shadow: 1px 1px 0 #1897c0, 2px 2px 0 #1897c0, 3px 3px 0 #1897c0, 4px 4px 0 #1897c0;
+  transform: skew(-45deg);
+  bottom: 0;
+}
+.resume .section_one .btn-right:hover {
+  transform: translateX(20px) scaleY(1.1);
+}
+@media screen and (max-width: 600px) {
+  .resume .section_one .btn-right:hover {
+    transform: none;
+  }
+}
+.resume .section_one .btn-left {
+  background: none;
+  border: 0;
+  font-size: 22px;
+  line-height: 2rem;
+  position: relative;
+  width: 20rem;
+  height: 2rem;
+  transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  .resume .section_one .btn-left {
+    width: 95%;
+    margin: 0px auto;
+  }
+}
+.resume .section_one .btn-left::before, .resume .section_one .btn-left::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #e4135d;
+  border-radius: 2px;
+  display: block;
+  transition: all 1s;
+  height: 1rem;
+}
+.resume .section_one .btn-left::before {
+  box-shadow: -1px 1px 0 #c81163, -2px 2px 0 #c81163, -3px 3px 0 #c81163, -4px 4px 0 #c81163;
+  transform: skew(45deg);
+  bottom: 0;
+  z-index: 1;
+}
+.resume .section_one .btn-left::after {
+  box-shadow: 1px 1px 0 #c81163, 2px 2px 0 #c81163, 3px 3px 0 #c81163, 4px 4px 0 #c81163;
+  transform: skew(-45deg);
+  top: 0;
+}
+.resume .section_one .btn-left:hover {
+  transform: translateX(-20px) scaleY(1.1);
+}
+@media screen and (max-width: 600px) {
+  .resume .section_one .btn-left:hover {
+    transform: none;
+  }
+}
+.resume .section_one .btn-right a,
+.resume .section_one .btn-left a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
 }
 
 .contact .main_section {
