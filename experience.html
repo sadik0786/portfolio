@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title> Sadik Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
@@ -45,52 +45,93 @@
             <div>
                 <h1 class="text-white text-center pb-3">Experience</h1>
             </div>
-            <div class="box_wrap">
-                <div class="work_exp">
+            <div class="main_div">
+                <!-- <div class="work_exp">
                     <div class="ex_circle">
                         3<sub>year</sub>
                     </div>
                     <div class="ex_name">html/css</div>
+                </div> -->
+                <div class='box a'>
+                    <p class="year">3year</p>
+                    <p class="skill_name">html</p>
                 </div>
-                <div class="work_exp">
-                    <div class="ex_circle">
-                        2<sub>year</sub>
-                    </div>
-                    <div class="ex_name">javascript/jquery</div>
+                <div class='box b'>
+                    <p class="year">3year</p>
+                    <p class="skill_name">css</p>
                 </div>
-                <div class="work_exp">
-                    <div class="ex_circle">
-                        3<sub>year</sub>
-                    </div>
-                    <div class="ex_name">bootstrap</div>
+                <div class='box c'>
+                    <p class="year">3year</p>
+                    <p class="skill_name">bootstrap</p>
                 </div>
-                <div class="work_exp">
-                    <div class="ex_circle">
-                        1.5<sub>year</sub>
-                    </div>
-                    <div class="ex_name">bootstrap/mui</div>
+                <div class='box d'>
+                    <p class="year">3year</p>
+                    <p class="skill_name">javascript</p>
                 </div>
-                <div class="work_exp">
-                    <div class="ex_circle">
-                        1.5<sub>year</sub>
-                    </div>
-                    <div class="ex_name">reactjs/nextjs</div>
+                <div class='box e'>
+                    <p class="year">3year</p>
+                    <p class="skill_name">jquery</p>
+                </div>
+                <div class='box f'>
+                    <p class="year">3year</p>
+                    <p class="skill_name">reactjs</p>
+                </div>
+                <div class='box g'>
+                    <p class="year">3year</p>
+                    <p class="skill_name">nextjs</p>
+                </div>
+                <div class='box h'>
+                    <p class="year">3year</p>
+                    <p class="skill_name">mui</p>
+                </div>
+                <div class='box i'>
+                    <p class="year">3year</p>
+                    <p class="skill_name">bulma</p>
                 </div>
 
             </div>
-
         </div>
     </div>
     </div>
     <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script>
-        const text = document.querySelector('.text p');
-        text.innerHTML = text.innerText.split("").map((char, i) =>
-            `<span style="transform:rotate(${i * 7.4}deg)">${char}</span>`
-        ).join('')
+
+        $(document).ready(function () {
+            function makeNewPosition() {
+
+                // Get viewport dimensions (remove the dimension of the div)
+                var h = $(".main_div").height() - 50;
+                var w = $(".main_div").width() - 50;
+
+                var nh = Math.floor(Math.random() * h);
+                var nw = Math.floor(Math.random() * w);
+
+                return [nh, nw];
+
+            }
+
+            function animateDiv(myclass) {
+                var newq = makeNewPosition();
+                $(myclass).animate({ top: newq[0], left: newq[1] }, 3500, function () {
+                    animateDiv(myclass);
+                });
+            };
+            animateDiv('.a');
+            animateDiv('.b');
+            animateDiv('.c');
+            animateDiv('.d');
+            animateDiv('.e');
+            animateDiv('.f');
+            animateDiv('.g');
+            animateDiv('.h');
+            animateDiv('.i');
+        });
+
+
     </script>
 </body>
 

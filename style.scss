@@ -242,48 +242,57 @@ body {
     }
   }
 }
-.experience {
+.work {
   color: #fff;
-  // padding: 15px 20px;
   .box_wrap {
     display: grid;
-    gap: 25px 50px;
-    grid-template-columns: repeat(3, 340px);
+    gap: 25px 30px;
+    grid-template-columns: repeat(3, 350px);
     @media screen and (max-width: 600px) {
       grid-template-columns: repeat(1, 1fr);
     }
     .work_exp {
-      // background-color: red;
       display: flex;
       align-items: center;
-      // justify-content: space-between;
-      gap: 15px;
+      gap: 10px;
       border: 1px solid #fff;
+      background-color: transparent;
       border-radius: 5px;
-      padding: 15px 20px;
+      padding: 20px 15px;
+      box-shadow: inset 0px 0px 10px 5px #fff;
       .ex_circle {
         display: flex;
         align-items: center;
-        // justify-content: center;
         flex-direction: column;
-        width: 80px;
-        height: 80px;
-        padding: 10px 0px 0px 0px;
-        background: linear-gradient(#ccc 0 0) padding-box,
+        width: 350px;
+        height: 120px;
+        border: 5px solid transparent;
+        border-radius: 10px;
+        padding: 10px 5px;
+        background: linear-gradient(#fff 0 0) padding-box,
           /*this is your grey background*/
             linear-gradient(to right, #9c20aa, #fb3570) border-box;
-        color: #313149;
-        border: 5px solid transparent;
-        border-radius: 50px;
         animation: circle 3s infinite alternate;
-        font-size: 20px;
+      }
+      p {
+        margin: 0px;
+      }
+      .year {
+        font-size: 1rem;
+        color: #005757;
         font-weight: 700;
       }
+      .role {
+        font-size: 1.25rem;
+        color: #5e2877;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
       .ex_name {
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #005757;
         text-transform: uppercase;
-        text-align: left;
       }
       @keyframes circle {
         0% {
@@ -316,37 +325,92 @@ body {
     }
   }
 }
-.work {
-  .slick_box {
-    // width: 800px;
-    height: auto;
-    padding: 20px 0px;
-    background-color: #00ffff;
-    // display: flex;
-    // align-items: center;
-    .main_item {
-      margin: 0px 10px;
-      height: 100px;
-      background-color: green;
-      position: relative;
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        width: 0;
-        height: 0;
-        border-top: 50px solid #00ffff;
-        border-bottom: 50px solid #00ffff;
-        border-left: 60px solid transparent;
+.experience {
+  .main_div {
+    width: 700px;
+    height: 350px;
+    margin: 0px auto;
+    background-color: transparent;
+    position: relative;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      height: 70vh;
+    }
+    .box {
+      position: absolute;
+      width: 100px;
+      // height: 40px;
+      text-align: center;
+      border-radius: 8px;
+      padding: 2px 0px;
+      p {
+        margin: 0px;
       }
-      .arrow-rightasdas {
-        width: 100%;
-        height: 100px;
-        // border-top: 60px solid transparent;
-        // border-bottom: 60px solid transparent;
-        // border-left: 200px solid green;
-        // border-right: 60px solid green;
+      .year {
+        color: #fff;
+        font-weight: 600;
       }
+      .skill_name {
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-style: italic;
+      }
+    }
+    .a {
+      background: #25cc0f;
+      background: linear-gradient(to bottom right, #25cc0f 0%, #9e3212 100%);
+    }
+    .b {
+      background: #b8e1fc;
+      background: radial-gradient(
+        circle farthest-corner at center center,
+        #b8e1fc 0%,
+        #231421 100%
+      );
+    }
+    .c {
+      background: #25cc0f;
+      background: linear-gradient(to bottom right, #25cc0f 0%, #9e3212 100%);
+    }
+    .d {
+      background: #cfe7fa;
+      background: linear-gradient(to right, #cfe7fa 0%, #6393c1 100%);
+    }
+    .e {
+      background: #ffff00;
+      background: linear-gradient(
+        to left,
+        #ffff00 0%,
+        #05c1ff 50%,
+        #ffff00 100%
+      );
+    }
+    .f {
+      background: #00ff00;
+      background: linear-gradient(to left, #00ff00 0%, #00ffff 100%);
+    }
+    .g {
+      background: #ffff00;
+      background: linear-gradient(
+        to left,
+        #ffff00 0%,
+        #05c1ff 50%,
+        #ffff00 100%
+      );
+    }
+    .h {
+      background: #25cc0f;
+      background: linear-gradient(to bottom right, #25cc0f 0%, #9e3212 100%);
+    }
+    .i {
+      background: #ffff00;
+      background: linear-gradient(
+        to left,
+        #ffff00 0%,
+        #05c1ff 50%,
+        #ffff00 100%
+      );
     }
   }
 }
