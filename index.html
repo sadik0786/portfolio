@@ -125,16 +125,16 @@
 
         if (todayTime >= "05:00:00 AM" && todayTime <= "12:00:00 PM") {
             // alert("It is morning time");
-            console.log(todayTime + " m")
+            // console.log(todayTime + " m")
             document.getElementById("time").innerText = "Good Morning";
         } else if (todayTime >= "12:00:00 PM" && todayTime <= "3:59:59 PM") {
-            console.log(todayTime + " n")
+            // console.log(todayTime + " n")
             document.getElementById("time").innerText = "Good Afternoon";
         } else if (todayTime >= "4:00:00 PM" && todayTime <= "8:59:59 PM") {
-            console.log(todayTime + " e")
+            // console.log(todayTime + " e")
             document.getElementById("time").innerText = "Good Evening"
-        } else if (todayTime >= "9:00:00 PM" && todayTime <= "4:59:59 AM") {
-            console.log(todayTime + " n8")
+        } else {
+            // console.log(todayTime + " n8")
             document.getElementById("time").innerText = "Good night";
         }
 

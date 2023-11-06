@@ -277,6 +277,11 @@ body {
   background: linear-gradient(#fff 0 0) padding-box, linear-gradient(to right, #9c20aa, #fb3570) border-box;
   animation: circle 3s infinite alternate;
 }
+@media screen and (max-width: 600px) {
+  .work .box_wrap .work_exp .ex_circle {
+    width: 100%;
+  }
+}
 .work .box_wrap .work_exp p {
   margin: 0px;
 }
@@ -321,7 +326,7 @@ body {
 }
 @media screen and (max-width: 600px) {
   .experience .main_div {
-    width: 100%;
+    width: 95%;
     height: 70vh;
   }
 }
@@ -404,13 +409,23 @@ body {
 }
 .resume .section_one {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 50px;
 }
 @media screen and (max-width: 600px) {
   .resume .section_one {
     gap: 30px;
     flex-direction: column;
+  }
+}
+.resume .section_one .fnance {
+  display: grid;
+  gap: 25px 30px;
+  grid-template-columns: repeat(2, 350px);
+}
+@media screen and (max-width: 600px) {
+  .resume .section_one .fnance {
+    display: contents;
   }
 }
 .resume .section_one .btn-right {

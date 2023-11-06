@@ -273,6 +273,9 @@ body {
           /*this is your grey background*/
             linear-gradient(to right, #9c20aa, #fb3570) border-box;
         animation: circle 3s infinite alternate;
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
       }
       p {
         margin: 0px;
@@ -333,7 +336,7 @@ body {
     background-color: transparent;
     position: relative;
     @media screen and (max-width: 600px) {
-      width: 100%;
+      width: 95%;
       height: 70vh;
     }
     .box {
@@ -433,12 +436,20 @@ body {
   }
   .section_one {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     // width: 100%;
     gap: 50px;
     @media screen and (max-width: 600px) {
       gap: 30px;
       flex-direction: column;
+    }
+    .fnance {
+      display: grid;
+      gap: 25px 30px;
+      grid-template-columns: repeat(2, 350px);
+      @media screen and (max-width: 600px) {
+        display: contents;
+      }
     }
     .btn-right {
       background: none;
